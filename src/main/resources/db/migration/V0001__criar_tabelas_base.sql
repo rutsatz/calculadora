@@ -19,5 +19,6 @@ create table configuracao (
      nome varchar(100) not null,
      codigo_medicamento int8 not null,
      tipo_diluicao varchar(60) not null,
+     valor_diluicao numeric(19, 2),
      foreign key (codigo_medicamento) references medicamento
 );

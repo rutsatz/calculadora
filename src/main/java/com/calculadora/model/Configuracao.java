@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 
 @Entity
 public class Configuracao {
@@ -25,6 +26,9 @@ public class Configuracao {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo_diluicao")
     private TipoDiluicao tipoDiluicao;
+
+    @Column(name = "valor_diluicao")
+    private BigDecimal valorDiluicao;
 
     public Long getCodigo() {
         return codigo;
@@ -56,5 +60,13 @@ public class Configuracao {
 
     public void setTipoDiluicao(TipoDiluicao tipoDiluicao) {
         this.tipoDiluicao = tipoDiluicao;
+    }
+
+    public BigDecimal getValorDiluicao() {
+        return valorDiluicao;
+    }
+
+    public void setValorDiluicao(BigDecimal valorDiluicao) {
+        this.valorDiluicao = valorDiluicao;
     }
 }
