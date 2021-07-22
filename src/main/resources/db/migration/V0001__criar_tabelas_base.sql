@@ -20,5 +20,7 @@ create table configuracao (
      codigo_medicamento int8 not null,
      tipo_diluicao varchar(60) not null,
      valor_diluicao numeric(19, 2),
+     valor_final_pos_diluicao numeric(19, 2),
+     concentracao_maxima_adm numeric(19, 2),
      foreign key (codigo_medicamento) references medicamento
 );

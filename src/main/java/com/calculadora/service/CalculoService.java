@@ -27,12 +27,14 @@ public class CalculoService {
 
         BigDecimal resultado = BigDecimal.ZERO;
 
+        // aqui muito provavel que va mudar para ser :  medicamento, marca, tipo aplicação
         Configuracao configuracao = configuracaoRepository.findById(parametrosDTO.getConfiguracaoId())
                 .orElseThrow(() -> new EntityNotFoundException("Configuração não encontrada"));
 
         for (DiluicaoStrategy diluicaoStrategy : strategyList) {
             if (diluicaoStrategy.supports(configuracao.getTipoDiluicao())) {
-                BigDecimal diluicao = diluicaoStrategy.aplicarDiluicao(configuracao, parametrosDTO.getPesoCrianca());
+                BigDecimal diluicao = diluicaoStrategy.aplicarDiluicao(configuracao, parametrosDTO.getPesoCrianca()
+                        ,parametrosDTO.getDosagemPrescrita());
                 resultado = resultado.add(diluicao);
             }
         }

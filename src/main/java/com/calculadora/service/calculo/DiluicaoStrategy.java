@@ -9,6 +9,6 @@ public interface DiluicaoStrategy {
 
     boolean supports(TipoDiluicao tipoDiluicao);
 
-    BigDecimal aplicarDiluicao(Configuracao configuracao, BigDecimal pesoCrianca);
+    BigDecimal aplicarDiluicao(Configuracao configuracao, BigDecimal pesoCrianca, BigDecimal dosagemPrescrita);
 
 }

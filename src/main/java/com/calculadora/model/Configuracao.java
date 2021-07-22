@@ -30,6 +30,12 @@ public class Configuracao {
     @Column(name = "valor_diluicao")
     private BigDecimal valorDiluicao;
 
+    @Column(name = "valor_final_pos_diluicao")
+    private BigDecimal valorFinalPosDiluicao;
+
+    @Column(name = "concentracao_maxima_adm")
+    private BigDecimal concentracaoMaximaAdm;
+
     public Long getCodigo() {
         return codigo;
     }
@@ -68,5 +74,21 @@ public class Configuracao {
 
     public void setValorDiluicao(BigDecimal valorDiluicao) {
         this.valorDiluicao = valorDiluicao;
+    }
+
+    public BigDecimal getValorFinalPosDiluicao() {
+        return valorFinalPosDiluicao;
+    }
+
+    public void setValorFinalPosDiluicao(BigDecimal valorFinalPosDiluicao) {
+        this.valorFinalPosDiluicao = valorFinalPosDiluicao;
+    }
+
+    public BigDecimal getConcentracaoMaximaAdm() {
+        return concentracaoMaximaAdm;
+    }
+
+    public void setConcentracaoMaximaAdm(BigDecimal concentracaoMaximaAdm) {
+        this.concentracaoMaximaAdm = concentracaoMaximaAdm;
     }
 }

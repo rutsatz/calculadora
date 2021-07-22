@@ -1,5 +1,7 @@
 package com.calculadora.service.calculo;
 
+import com.calculadora.service.calculo.model.ParametrosCalculo;
+
 import java.math.BigDecimal;
 
 public abstract class Preparo {
@@ -10,6 +12,6 @@ public abstract class Preparo {
         this.proximo = proximo;
     }
 
-    public abstract BigDecimal diluir(BigDecimal valor);
+    public abstract BigDecimal diluir(ParametrosCalculo parametrosCalculo);
 
 }
